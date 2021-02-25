@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html{margin:0;padding:0;} 
+		body {font-family: 'Lato', sans-serif;background-color:#b59157;background-image:url(bg-pattern.png);background-repeat:repeat;width:100%;height:100%;overflow:hidden}
+		.svg-holder {width:100%;max-width:600px;margin:0 auto;position: relative;}
+		#icon1 {transform-origin:center;fill:#000;cursor:pointer}
+		#twitter, .fa, #tumblr, #email, #weasyl {opacity:0;display:none;fill:#BF9B5F;transition:0.3s;}
+		.outer {display: table;position: absolute;}
+		.middle {display: table-cell;vertical-align: middle;}
+		.inner {margin-left: auto;margin-right: auto; }
+		#left-div{width:70%;height:100%}
+		#right-div {transition:1s;position:absolute;height:100%;right:0;width:30%;background:#1c1c1c; text-align:center;overflow:hidden}
+		.shop-btn {padding:10px 20px;background:#1c1c1c;display:inline-block;margin:0 auto;border:4px solid #b59157;color:#b59157;font-size:25px;font-weight:500;transition:0.3s;cursor:pointer}
+		.shop-btn:hover {transform:scale(1.05)}
+		#loading {display:none;text-align:center;opacity:0;transition:1s;cursor:pointer;}
+		#loading img {width:80px;}
+		#loading.open {display:block;opacity:1}
+		.shop-btn.open {transition:1s;opacity:0}
+		#closeBtn.open {opacity:1;width:50px;}
+		#right-div.open {width:100%;height:100%;}
+		#center1, #center2, #center3, #center4, #center5, #center6 {display:none;opacity:1;transition:1s;transform-origin:center;transition-timing-function:ease-in-out}
+		#iconMask {fill:rgba(0,0,0,0);cursor:pointer}
+		.st0{fill:#BF9B5F;}
+		.st1{fill:#BF9B5F;}
+		.st2{fill:none;}
+		.st3{fill:none;stroke:#BF9B5F;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
+		* {
+			-webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent;
+		}
+		#noiskLogo {position:absolute;bottom:15px;left:15px;width:120px;}
+		.sideBarImage {width:100%;display:block;border-bottom:2px solid #000}
+		@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+		@media (max-width: 767px) {
+			#left-div{width:100%;height:70%;top:0;}
+			#right-div{width:100%;height:30%;bottom:0;}
+			#closeBtn.open {opacity:1;width:25px;}
+			#noiskLogo {position:absolute;bottom:10px;left:10px;width:100px;}
+		}
